@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>LISTA DE CARTAS PORTE</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                
+                <th>FOLIO</th>
+                <th>LUGAR</th>
+                <th>FECHA</th>
+                <th>ORIGEN</th>
+                <th>REMITENTE</th>
+                <th>RFC</th>
+                <th>ACCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cartaporte in cartaportes %}
+            <tr>
+                
+                <td>{{ cartaporte.folio }}</td>
+                <td>{{ cartaporte.lugar }}</td>
+                <td>{% if cartaporte.fecha %}{{ cartaporte.fecha|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ cartaporte.origen }}</td>
+                <td>{{ cartaporte.remitente }}</td>
+                <td>{{ cartaporte.rfc }}</td>
+                <td>
+                    <ul>
+                        <li style="list-style:none;">
+                            <a class="btn btn-sm btn-success" href="{{ path('cartaporte_show', { 'id': cartaporte.id }) }}">MOSTRAR</a>
+                        </li>
+                        <li style="list-style:none;">
+                            <a class="btn btn-sm btn-warning" href="{{ path('cartaporte_edit', { 'id': cartaporte.id }) }}">EDITAR</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li style="list-style:none;">
+            <a class="btn btn-sm btn-primary" href="{{ path('cartaporte_new') }}">CREAR NUEVA CARTA PORTE</a>
+        </li>
+    </ul>
+{% endblock %}

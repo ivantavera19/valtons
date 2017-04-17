@@ -1,0 +1,7 @@
+valtons_cartaporte:
+    resource: "@ValtonsBundle/Resources/config/routing/cartaporte.yml"
+    prefix:   /cartaporte
+
+valtons_homepage:
+    path:     /
+    defaults: { _controller: ValtonsBundle:Default:index }

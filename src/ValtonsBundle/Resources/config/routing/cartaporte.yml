@@ -1,0 +1,24 @@
+cartaporte_index:
+    path:     /
+    defaults: { _controller: "ValtonsBundle:Cartaporte:index" }
+    methods:  GET
+
+cartaporte_show:
+    path:     /{id}/show
+    defaults: { _controller: "ValtonsBundle:Cartaporte:show" }
+    methods:  GET
+
+cartaporte_new:
+    path:     /new
+    defaults: { _controller: "ValtonsBundle:Cartaporte:new" }
+    methods:  [GET, POST]
+
+cartaporte_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ValtonsBundle:Cartaporte:edit" }
+    methods:  [GET, POST]
+
+cartaporte_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ValtonsBundle:Cartaporte:delete" }
+    methods:  DELETE

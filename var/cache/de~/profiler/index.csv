@@ -1,0 +1,14 @@
+70eb5a,127.0.0.1,GET,http://127.0.0.1:8000/css/ie10-viewport-bug-workaround.css,1491578503,1f0b2e,200
+1f0b2e,127.0.0.1,GET,http://127.0.0.1:8000/css/ie10-viewport-bug-workaround.css,1491578503,,404
+ea3329,127.0.0.1,GET,http://127.0.0.1:8000/login,1491578508,,200
+97917e,127.0.0.1,GET,http://127.0.0.1:8000/css/ie10-viewport-bug-workaround.css,1491578511,80cf19,200
+80cf19,127.0.0.1,GET,http://127.0.0.1:8000/css/ie10-viewport-bug-workaround.css,1491578511,,404
+39e9be,127.0.0.1,GET,http://127.0.0.1:8000/login?_csrf_token=iv6zbDXt-MfNi4yKFgaqKkaCohkYhL8CtLU-x7tcDoc&_password=ivan&_submit=Entrar&_username=ivan,1491578515,,200
+e46242,127.0.0.1,GET,http://127.0.0.1:8000/css/ie10-viewport-bug-workaround.css,1491578517,f673ae,200
+f673ae,127.0.0.1,GET,http://127.0.0.1:8000/css/ie10-viewport-bug-workaround.css,1491578517,,404
+385fef,127.0.0.1,GET,http://127.0.0.1:8000/css/ie10-viewport-bug-workaround.css,1491578560,3a72d0,200
+3a72d0,127.0.0.1,GET,http://127.0.0.1:8000/css/ie10-viewport-bug-workaround.css,1491578561,,404
+b1be18,127.0.0.1,GET,http://127.0.0.1:8000/login?_csrf_token=iv6zbDXt-MfNi4yKFgaqKkaCohkYhL8CtLU-x7tcDoc&_password=daniela&_submit=Entrar&_username=daniela,1491578572,,200
+2bb019,127.0.0.1,GET,http://127.0.0.1:8000/css/ie10-viewport-bug-workaround.css,1491578574,f67b1f,200
+f67b1f,127.0.0.1,GET,http://127.0.0.1:8000/css/ie10-viewport-bug-workaround.css,1491578574,,404
+c04e03,127.0.0.1,GET,http://127.0.0.1:8000/login?_csrf_token=iv6zbDXt-MfNi4yKFgaqKkaCohkYhL8CtLU-x7tcDoc&_password=ivan&_submit=Entrar&_username=ivan,1491578834,,200

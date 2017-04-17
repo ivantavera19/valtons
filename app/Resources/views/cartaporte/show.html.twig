@@ -1,0 +1,204 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+<table class="table">
+  <tr>
+    <th colspan="6" rowspan="2">
+      <p align="center">R.F.C VGR131216LD5 <br> RIO CHURUBUSCO 1611 TORRE 3 DESPACHO 501, COL. GABRIEL RAMOS MILLAN <br> DELEG. IZTACALCO CDMX C.P. 08730 <br> SKYPE: atención.valtons E-mail: servicioalcliente@valtons.com.mx / isai.perez@valtons.com.mx</p>
+    </th>
+    <th>FOLIO</th>
+  </tr>
+  <tr>
+    <td>{{ cartaporte.folio }}</td>
+  </tr>
+</table>
+
+<table class="table table-bordered">
+      
+      <tr>
+        <td colspan="7">
+            LUGAR Y FECHA: 
+            {{ cartaporte.lugar }} A {% if cartaporte.fecha %}{{ cartaporte.fecha|date('Y-m-d') }}{% endif %}
+        </td>
+      </tr>
+      <tr>
+        <td colspan="7">
+            ORIGEN:
+            {{ cartaporte.origen }}
+        </td>
+      </tr>
+      <tr>
+        <td colspan="7">
+            REMITENTE:
+            {{ cartaporte.remitente }}
+        </td>
+      </tr>
+      <tr>
+        <td colspan="7">
+            R.F.C.
+            {{ cartaporte.rfc }}
+        </td>
+      </tr>
+      <tr>
+        <td colspan="7">
+            DOMICILIO:
+            {{ cartaporte.domicilio }}
+        </td>
+      </tr>
+      <tr>
+        <td colspan="7">
+            SE RECOGERA EN:
+            {{ cartaporte.serecogera }}
+        </td>
+      </tr>
+      <tr>
+        <td colspan="7">
+            DESTINATARIO:
+            {{ cartaporte.destinatario }}
+        </td>
+      </tr>
+      <tr>
+        <td colspan="7">
+            DIRECCION:
+            {{ cartaporte.direccion }}
+        </td>
+      </tr>
+      <tr>
+        <td colspan="7">
+            CONTACTO:
+            {{ cartaporte.contacto }}
+        </td>
+      </tr>
+      <tr>
+        <td colspan="7">
+            SE ENTREGARA EN:
+            {{ cartaporte.seentrega }}
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+            VALOR UNITARIO, CUOTA CONVENIDA POR TONELADA O CARGA FRACCIONARIA:
+            {{ cartaporte.valorunitario }}
+        </td>
+        <td colspan="2">
+            VALOR DECLARADO:
+            {{ cartaporte.valordeclarado }}
+        </td>
+        <td colspan="2">
+            CONDICIONES DE PAGO:
+            {{ cartaporte.condicionespago }}
+        </td>
+      </tr>
+      <tr>
+        <td>BULTOS</td>
+        <td rowspan="2">QUE EL REMITENTE DICE QUE CONTIENE</td>
+        <td rowspan="2">PESO</td>
+        <td colspan="2">VOLUMEN</td>
+        <td rowspan="2">CONCEPTO</td>
+        <td rowspan="2">IMPORTE</td>
+      </tr>
+      <tr>
+        <td>No. DE CONTENEDOR</td>
+        <td>TIPO</td>
+        <td>PESO ESTIMADO</td>
+      </tr>
+      <tr>
+        <td rowspan="8">{{ cartaporte.numcontenedor }}</td>
+        <td rowspan="8">{{ cartaporte.remitentedicecontenido }}</td>
+        <td rowspan="8">{{ cartaporte.peso }}</td>
+        <td rowspan="8">{{ cartaporte.tipo }}</td>
+        <td rowspan="8">{{ cartaporte.pesoestimado }}</td>
+        <td>FLETE</td>
+        <td>{{ cartaporte.fleteimporte }}</td>
+      </tr>
+      <tr>
+        <td>SEGURO</td>
+        <td>{{ cartaporte.seguroimporte }}</td>
+      </tr>
+      <tr>
+        <td>MANIOBRAS</td>
+        <td>{{ cartaporte.maniobrasimporte }}</td>
+      </tr>
+      <tr>
+        <td>AUTOPISTAS LIBRAMIENTOS Y TRANSBORDADORES</td>
+        <td>{{ cartaporte.autopistaslibratrans }}</td>
+      </tr>
+      <tr>
+        <td>OTROS</td>
+        <td>{{ cartaporte.otrosimporte }}</td>
+      </tr>
+      <tr>
+        <td>IMPORTE $</td>
+        <td>{{ cartaporte.importe }}</td>
+      </tr>
+      <tr>
+        <td>I.V.A 16%</td>
+        <td>{{ cartaporte.sumiva }}</td>
+      </tr>
+      <tr>
+        <td>SUBTOTAL $</td>
+        <td>{{ cartaporte.subtotalimporte }}</td>
+      </tr>
+      <tr>
+        <td colspan="2">REEMBARCO: {{ cartaporte.reembarco }}</td>
+        <td colspan="3">REEMBARCARSE CON: </td>
+        <td>RET. I.V.A. $</td>
+        <td>{{ cartaporte.retivaimporte }}</td>
+      </tr>
+      <tr>
+        <td colspan="2">CONDUJO {{ cartaporte.condujo }}<br>
+            DE: {{ cartaporte.de }} A: {{ cartaporte.hastaprimero }}
+        </td>
+        <td colspan="3">CONDUCIRA {{ cartaporte.conducira }}<br>
+            DE : {{ cartaporte.desegundo }} A: {{ cartaporte.hastasegundo }}
+            
+        </td>
+        <td>TOTAL $</td>
+        <td>{{ cartaporte.total }}</td>
+      </tr>
+      <tr>
+        <td colspan="5">
+            <p align="center">IMPORTE TOTAL EN LETRA<br>
+              {{ cartaporte.importeenletra }}
+            </p> 
+         </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+            <p align="center">ESTE SERVICIO NO INCLUYE SEGURO DE LA <br>MERCANCIA, TANTO LAS MERCANCIAS COMO <br>EL CONTENEDOR VIAJAN POR CUENTA Y <br>RIESGO DEL CLIENTE Y NO ASEGURAMOS <br>LAS MISMAS, DE NO MEDIAR ORDEN <br>EXPRESA POR ESCRITO EN CADA SERVICIO</p>
+        </td>
+        <td colspan="2">
+            <p align="center">NOMBRE DEL DESTINATARIO <br><br>
+                {{ cartaporte.nombredestinatario }}
+            </p>
+        </td>
+        <td colspan="2"><p align="center">RECIBI DE CONFORMIDAD <br><br><br><br>_________________ <br>FIRMA DEL DESTINATARIO</p></td>
+        <td>
+            <p align="center">OBSERVACIONES</p>
+            <p align="center">{{ cartaporte.observaciones }}</p> 
+        </td>
+      </tr>
+        
+        
+</table>
+
+
+    <ul>
+        <li>
+            <a href="{{ path('cartaporte_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('cartaporte_edit', { 'id': cartaporte.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+
+{% endblock %}
